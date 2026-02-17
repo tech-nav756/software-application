@@ -1,15 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import Hero from '../features/hero/Hero';
 import styles from './styles/Home.module.css';
 
 const Home = () => {
-  const [scrollY, setScrollY] = useState(0);
   const [activeRoom, setActiveRoom] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const rooms = [
     {
@@ -68,31 +62,8 @@ const Home = () => {
 
   return (
     <div className={styles.home}>
-      {/* Hero Section */}
-      <section className={styles.hero}>
-        <div className={styles.heroContent}>
-          <span className={styles.heroLabel}>Est. 1924</span>
-          <h1 className={styles.heroTitle}>
-            The Grand
-            <span className={styles.heroTitleAccent}>Meridian</span>
-          </h1>
-          <p className={styles.heroSubtitle}>
-            Where timeless elegance meets contemporary luxury
-          </p>
-          <div className={styles.heroActions}>
-            <button className={styles.heroPrimaryBtn}>Reserve Your Stay</button>
-            <button className={styles.heroSecondaryBtn}>
-              <span>Explore</span>
-              <span className={styles.btnArrow}>↓</span>
-            </button>
-          </div>
-        </div>
-        <div 
-          className={styles.heroParallax}
-          style={{ transform: `translateY(${scrollY * 0.5}px)` }}
-        ></div>
-        <div className={styles.heroOverlay}></div>
-      </section>
+      {/* New Hero Component */}
+      <Hero />
 
       {/* Introduction Section */}
       <section className={styles.introduction}>

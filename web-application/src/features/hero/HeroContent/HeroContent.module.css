@@ -1,0 +1,51 @@
+.content {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.titleAccent {
+  display: block;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: #d4af37;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+
+.titleMain {
+  display: block;
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: #ffffff;
+  font-weight: 200;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .content {
+    gap: 1.5rem;
+  }
+
+  .titleAccent {
+    letter-spacing: 0.2em;
+  }
+}
